@@ -1,13 +1,14 @@
 [Main]
 name = "Uni-Install"
-version = "0.0.1a"
+version = "0.1"
 creator = "dream4sy"
 
 [DownloadProperties]  # gdrive (or any DIRECT download link) need to be base64 encoded (utf-8)
-gdrive = "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vZHJpdmUvdjMvZmlsZXMvMXROWS1ubUU5VjBxSzRudzhHdGNKQWVkNHdFb2R4YWFQP2FsdD1tZWRpYSZrZXk9QUl6YVN5QWVKSzUxSE5acXU4VkZlejFHN2hPQmtSNjhFOUlUV1dV"
-default_directory = "#ad"  # Options: [Downloads -> #d, Appdata (with roaming, local, and local-low in it) -> #ad]
+gdrive = "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vZHJpdmUvdjMvZmlsZXMvMWFZY3ktZThUenoybkdkQUZfbWJzT1YzZmtjRlRxTElCP2FsdD1tZWRpYSZrZXk9QUl6YVN5QWVKSzUxSE5acXU4VkZlejFHN2hPQmtSNjhFOUlUV1dV"
+default_directory = "#d"  # Options: [Downloads -> #d, Appdata (with roaming, local, and local-low in it) -> #ad]
 scnd_directoryString = "" # If #ad (Appdata) was written in default_directory, you should add "Roaming\\" etc. HERE!
-program_name = "Plutonium Easy Installer"
-directory_folder = "PlutoniumEasyInstaller" 
+program_name = "a Test file"
+directory_folder = "TestFileJiggleJiggle" 
 is_zip = false
-file_name = "PlutoniumEasyInstaller.exe" # Need to be a .zip, if "is_zip" is true! [rar and 7z doesnt work btw]
+file_name = "tttest.txt" # Need to be a .zip, if "is_zip" is true! [rar and 7z doesnt work btw]
+type = "download" # Options: ["download", "install"]

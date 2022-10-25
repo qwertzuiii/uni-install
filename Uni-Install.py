@@ -33,7 +33,14 @@ logo = """              __        __               __          __ __
 print(logo)
 print("{}, by {}".format(configM['version'], configM['creator']))
 
-print('\n\nDo you want to install %s? [y/n]' % config['program_name'])
+if config['type'] == "download":
+    type = 'download'
+elif config['type'] == "install":
+    type = 'install'
+else:
+    type = '... oh, you are really dumb for editing my config.toml! Fix it! "download" or "install"'
+
+print('\n\nDo you want to {} {}? [y/n]'.format(type, config['program_name']))
 Getching = True
 
 while Getching:
@@ -53,6 +60,7 @@ else:
     defaultDir = config['default_directory']
 
 
+
 print('Do you want to install it into the default directory? (%s) [y/n]' % (defaultDir + config['directory_folder']))
 Getching = True
 
@@ -60,7 +68,7 @@ while Getching:
     i = yesOrNo()
 
     if i == False:
-        directory = (config['default_directory'] + config['directory_folder'])
+        directory = (defaultDir + config['directory_folder'])
         Getching = False
     elif i == "n":
         directory = eg.diropenbox("Select a folder do you want to install %s" % config['program_name'])
